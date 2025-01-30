@@ -194,7 +194,7 @@
   # Hyprland setup
   programs.kitty.enable = true;
   wayland.windowManager.hyprland.enable = true;
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   networking.hostName = "altf4-nix";
   networking.networkmanager.enable = true;
