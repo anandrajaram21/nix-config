@@ -82,11 +82,6 @@ in {
     };
   };
 
-  # Hyprland setup
-  programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

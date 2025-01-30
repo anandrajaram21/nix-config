@@ -134,9 +134,6 @@
     LC_TIME = "en_IN";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
 
   # Enable the KDE Plasma Desktop Environment.
@@ -179,6 +176,7 @@
      wget
      git
      gnupg
+     kitty
   ];
 
   # Set the default editor to vim
@@ -192,6 +190,11 @@
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
     polkitPolicyOwners = [ "altf4" ];
   };
+
+  # Hyprland setup
+  programs.kitty.enable = true;
+  wayland.windowManager.hyprland.enable = true;
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   networking.hostName = "altf4-nix";
   networking.networkmanager.enable = true;
