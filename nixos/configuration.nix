@@ -177,6 +177,7 @@
      git
      gnupg
      kitty
+     spotify
   ];
 
   # Set the default editor to vim
